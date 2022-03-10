@@ -163,8 +163,8 @@ async def VidWatermarkSaver(bot, cmd):
 			)
 			return
 	editable = await cmd.reply_text("Downloading Image ...")
-	dl_loc = Config.DOWN_PATH + "/" + str(cmd.from_user.id) + "/"
-	watermark_path = Config.DOWN_PATH + "/" + str(cmd.from_user.id) + "/thumb.jpg"
+	dl_loc = f'{Config.DOWN_PATH}/{str(cmd.from_user.id)}/'
+	watermark_path = f'{Config.DOWN_PATH}/{str(cmd.from_user.id)}/thumb.jpg'
 	await asyncio.sleep(5)
 	c_time = time.time()
 	the_media = await bot.download_media(
